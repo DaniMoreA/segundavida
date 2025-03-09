@@ -24,6 +24,10 @@
                         <p><strong>Email:</strong> {{ $ad->email }}</p>
                         <p><strong>Contenido:</strong> {{ $ad->content }}</p>
                         <p><strong>Precio:</strong> {{ $ad->price }} €</p>
+                        
+                        {{-- @if($ad->image)<!-- Muestra la imagen si se ha subido -->
+                        <img src="{{ asset('storage/' . $ad->image) }}" alt="Imagen del anuncio" width="200">
+                        @endif --}}
 
                         <!-- Boton Eliminar -->
                         <form action="{{ route('delete-ad', $ad->id) }}" method="POST" style="display:inline;">

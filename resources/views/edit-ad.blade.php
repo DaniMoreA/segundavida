@@ -35,6 +35,18 @@
             <label for="price">Precio:</label>
             <input type="number" id="price" name="price" value="{{ old('price', $ad->price) }}" step="0.01" required>
 
+             {{-- <!-- Mostrar si se ha subido -->
+            @if($ad->image)
+                <p>Imagen actual:</p>
+                <img src="{{ asset('storage/' . $ad->image) }}" alt="Imagen del anuncio" width="200">
+            @endif
+
+            <!-- Imagen -->
+            <label for="image">Subir nueva imagen (opcional):</label>
+            <input type="file" id="image" name="image" accept="image/*"> --}}
+
+
+
             <button type="submit">Guardar Cambios</button>
         </form>
     </div>

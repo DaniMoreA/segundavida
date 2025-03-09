@@ -46,6 +46,10 @@
             <input type="number" id="price" name="price" step="0.01" value="{{ old('price') }}" required>
             @error('price') <div class="error-message">{{ $message }}</div> @enderror
 
+            {{-- <!-- Imagen -->
+            <label for="image">Subir imagen:</label>
+            <input type="file" id="image" name="image" accept="image/*"> --}}
+
             <button type="submit">Crear Anuncio</button>
         </form>
     </div>

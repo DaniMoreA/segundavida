@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('subject');
             $table->text('content');
             $table->decimal('price', 10, 2);
+            //$table->string('image')->nullable(); 
             $table->timestamps();
         });
     }
